@@ -17,7 +17,7 @@ const pool = new Pool({
 const data103Routes = require('./routes/data103Routes');
 const data1033Routes = require('./routes/data1033Routes');
 const eventRoutes = require('./routes/eventRoutes');
-const event2Routes = require('./routes/event2Routes');
+const checkinRoutes = require('./routes/checkinRoutes');
 
 
 pool.connect((err, client, done) => {
@@ -50,7 +50,8 @@ app.use('/data103', data103Routes);
 app.use('/data1033', data1033Routes);
 
 app.use('/dataevent', eventRoutes);
-app.use('/dataevent2', event2Routes);
+app.use('/checkin', checkinRoutes);
+
 
 const PORT = process.env.PORT || 3005;
 const server = http.createServer(app);
