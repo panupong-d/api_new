@@ -30,7 +30,7 @@ router.get('/id/:id', (req, res) => {
 
 
 router.get('/event', (req, res) => {
-    const sql = 'SELECT * FROM event ';
+    const sql = 'SELECT * FROM event ORDER BY id ASC';
     pool.query(sql, (err, result) => {
         if (err) {
             console.error('Error executing query', err.stack);
