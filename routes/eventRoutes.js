@@ -45,5 +45,3 @@ router.get('/event', (req, res) => {
 
 module.exports = router;
 
-
-git remote add origin https://github.com/panupong-d/apitest.git
